@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Data Management</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+
+	<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+</head>
+
+<body>
+<div class="container">
+	
+	<!-- Jumbotron -->
+	<div class="row">
+		<div class="jumbotron">	
+	 		<h1 class="text-center">Employee Data Management</h1>
+	 		<h3 class="text-center">A Comprehensive Directory of Employee Billable Hours</h3>
+	 	</div>
+ 	</div>
+
+ 	<!-- Current Employees Pane -->
+ 	<div class="row">
+
+		<div class="panel panel-default">
+	  		<div class="panel-heading ">
+	   			<h3 class="panel-title">Current Employees</h3>
+	  		</div>
+	  		
+	  		<div class="container">
+		        <div class="row">
+		            <div class="col-md-8">
+		                <table class="table allEmployees table-striped"> 
+		                    <thead>
+		                        <tr>
+		                            <th>Employee Name:</th>
+		                            <th>Role:</th>
+		                            <th>Start Date:</th>
+		                            <th>Months Worked:</th>
+		                            <th>Monthly Rate ($):</th>
+		                            <th>Total Billed ($):</th>
+		                        </tr>
+		                    </thead>
+		                    <tbody>
+		                        <tr id="trainsArea">
+		                            <!-- <td class="trainName"></td>
+		                            <td id="dest"></td>
+		                            <td id="freq"></td>
+		                            <td id="nxt"></td>
+		                            <td id="lefttime"></td> -->
+		                            <td></td><td></td><td></td><td></td><td></td>
+		                        </tr>
+		                    </tbody>                        
+		                    </table>
+		                </div>
+		            </div>
+		    </div>
+
+	  	</div>
+	</div>
+
+ 	<div class="row">
+	 	<div class="panel panel-default">
+	  		<div class="panel-heading">
+	   			<h3 class="panel-title">Add Employee</h3>
+	  		</div>
+
+	  		<div class="panel-body">
+		  			<div class="row">
+						<div class="employeeName">
+							<p>Employee Name:</p>
+							<input type="text" id="calcEmployeeName">
+						</div>
+					</div>
+					<div class="row">
+						<div class="role">
+							<p>Role:</p>
+							<input type="text" id="calcRole">
+						</div>
+					</div>
+					<div class="row">
+						<div class="startDate">
+							<p>Start Date (DD/MM/YY - 12/01/80):</p>
+							<input type="text" id="calcStartDate">
+						</div>
+					</div>
+					<div class="row">
+						<div class="monthlyRate">
+							<p>Monthly Rate</p>
+							<input type="text" id="calcRate">
+						</div>
+					</div>
+					<div class="row">
+						<button class="submitButton">
+							<p>Submit</p>
+						</button>
+					</div>
+	 		 </div>
+
+
+		</div>
+		<!-- close div row  -->
+	</div>
+<!-- close div for container -->
+</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
