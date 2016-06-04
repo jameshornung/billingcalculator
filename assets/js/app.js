@@ -18,5 +18,14 @@ $(".submitButton").on("click", function() {
 });
 
 currentEmployeesTable.on("child_added", function(childSnapShot) {
+
 	console.log(childSnapShot.val().name);
-})
+	$('#nameOfEmployee').append(childSnapShot.val().name + "<br>");
+	$('#roleOfEmployee').append(childSnapShot.val().role + "<br>");
+	$('#workingStartDate').append(childSnapShot.val().start + "<br>");
+	$('#workingMonthlyRate').append(childSnapShot.val().rate + "<br>");
+	// $('#workingTotalBilled').append(childSnapShot.val().start);
+
+}, function(errorObject) {
+
+});
